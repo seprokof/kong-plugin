@@ -58,7 +58,7 @@ jobs:
         cat luacov.report.out
         cat luacov.stats.out
         rm *.report.out
-        luacov-coveralls
+        luacov-coveralls -v
         ls -la
         cat luacov.report.out
         cat luacov.stats.out
