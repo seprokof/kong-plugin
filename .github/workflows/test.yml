@@ -54,8 +54,14 @@ jobs:
           cp .luacov .luacov_backup
           cat .luacov_backup | sed 's/\/kong-plugin\/luacov./luacov./' > .luacov
         fi
+        ls -la
+        cat luacov.report.out
+        cat luacov.stats.out
         rm *.report.out
         luacov-coveralls
+        ls -la
+        cat luacov.report.out
+        cat luacov.stats.out
         #luacov-coveralls --output coveralls.out
         # undo the hack
         if [ -f .luacov_backup ]; then
